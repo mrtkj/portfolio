@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <my-header></my-header>
     <router-view/>
-    <button class="btn btn-primary">test</button>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
+import myHeader from './components/header'
+import myFooter from './components/footer'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    myHeader,
+    myFooter
+  }
 }
 </script>
 
@@ -19,6 +26,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>
