@@ -58,5 +58,5 @@ module.exports = {
       // plugin
     ]
   },
-  publicPath: "./"
+  publicPath: "./portfolio/dist/"
 };
