@@ -14,7 +14,7 @@ module.exports = {
       title: "Index Page",
       // チャンクの指定
       chunks: ["chunk-vendors", "chunk-common", "index"]
-    },
+    }
     // サブページをせっているするとエントリーページのファイル以外はこちらが参照される。
     // テンプレートファイルは、 `public/subpage.html`
     // public/subpage.htmlがなかったら `public/index.html`が呼び出される。
@@ -29,7 +29,7 @@ module.exports = {
   devServer: {
     port: 8080,
     contentBase: path.resolve(__dirname, "public"),
-    host: "localhost",
+    host: "localhost"
   },
   css: {
     // 毎回読み込んでおくscssファイルの指定
@@ -51,7 +51,7 @@ module.exports = {
     },
     resolve: {
       alias: {
-        "vue$": "vue/dist/vue.esm.js",
+        vue$: "vue/dist/vue.esm.js",
         "@": path.resolve(__dirname, "src/")
       }
     },
