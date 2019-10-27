@@ -58,5 +58,5 @@ module.exports = {
       // plugin
     ]
   },
-  publicPath: "https://mrtkj.github.io/portfolio/dist/"
+  publicPath: "./"
 };
