@@ -14,13 +14,14 @@ module.exports = {
       title: "Index Page",
       // チャンクの指定
       chunks: ["chunk-vendors", "chunk-common", "index"]
-    }
+    },
     // サブページをせっているするとエントリーページのファイル以外はこちらが参照される。
     // テンプレートファイルは、 `public/subpage.html`
     // public/subpage.htmlがなかったら `public/index.html`が呼び出される。
     // 出力されるファイル名は `subpage.html`となる。
     // subpage: "src/subpage/main.js"
   },
+  outputDir: "docs/",
   // キャッシュバスティングのためにファイル名にハッシュをつけている。
   // デフォルトでtrueなので、falseの場合のみ指定
   filenameHashing: true,
@@ -58,5 +59,5 @@ module.exports = {
       // plugin
     ]
   },
-  publicPath: "./portfolio/dist/"
+  publicPath: "./"
 };
