@@ -1,31 +1,40 @@
 <template>
   <div id="app">
     <my-header></my-header>
-    <router-view/>
-    <my-footer></my-footer>
+    <router-view />
   </div>
 </template>
 
 <script>
-import myHeader from './components/header'
-import myFooter from './components/footer'
+import MyHeader from "@/components/Header.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    myHeader,
-    myFooter
+    MyHeader
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* margin-top: 60px; */
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
