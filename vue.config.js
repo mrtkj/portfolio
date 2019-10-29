@@ -21,7 +21,7 @@ module.exports = {
     // 出力されるファイル名は `subpage.html`となる。
     // subpage: "src/subpage/main.js"
   },
-  outputDir: "docs/",
+  // outputDir: "docs/",
   // キャッシュバスティングのためにファイル名にハッシュをつけている。
   // デフォルトでtrueなので、falseの場合のみ指定
   filenameHashing: true,
@@ -59,5 +59,8 @@ module.exports = {
       // plugin
     ]
   },
-  publicPath: "./portfolio/"
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/portfolio/'
+    : '/',
+  outputDir: 'docs'
 };

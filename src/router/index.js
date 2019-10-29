@@ -10,12 +10,12 @@ Vue.use(BootstrapVue);
 
 const routes = [
   {
-    path: "/portfolio",
+    path: "/",
     name: "home",
     component: Home
   },
   {
-    path: "/portfolio/about",
+    path: "/about",
     name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
