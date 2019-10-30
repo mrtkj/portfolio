@@ -10,11 +10,9 @@
       <b-collapse id="nav-collapse" class="w-100" is-nav>
         <b-navbar-nav :align="'center'" class="w-100">
           <b-nav-item to="/">Home</b-nav-item>
-          <b-nav-item to="/about">About</b-nav-item>
-          <b-nav-item to="/about">Skills</b-nav-item>
-          <b-nav-item to="/about">Works</b-nav-item>
-          <b-nav-item to="/about">Portfolio</b-nav-item>
-          <b-nav-item to="/about">Contact</b-nav-item>
+          <b-nav-item to="/skills">Skills</b-nav-item>
+          <b-nav-item to="/portfolio">Portfolio</b-nav-item>
+          <b-nav-item to="/contact">Contact</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

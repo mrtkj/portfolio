@@ -39,6 +39,18 @@ module.exports = {
       }
     }
   },
+  chainWebpack: config => {
+    config.module
+      .rule("vue")
+      .use("vue-loader")
+      .loader("vue-loader")
+      .tap(options => {
+        options.transformAssetUrls = {
+          "b-img": "src"
+        };
+        return options;
+      });
+  },
   configureWebpack: {
     module: {
       rules: [
@@ -59,7 +71,5 @@ module.exports = {
       // plugin
     ]
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/portfolio/'
-    : '/'
+  publicPath: process.env.NODE_ENV === "production" ? "/portfolio/" : "/"
 };
