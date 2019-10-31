@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.4",
+    "bs-vue-timeline": "^0.1.4",
     "core-js": "^3.3.2",
     "path": "^0.12.7",
     "vue": "^2.6.10",
