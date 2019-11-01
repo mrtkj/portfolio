@@ -5,47 +5,36 @@
         <p class="border-bottom inline-block text-nowrap h2">
           Skills
         </p>
-
-        <vue-timeline :timeline-items="timelineItems"></vue-timeline>
+        <timelines :timelines="lines"></timelines>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import VueTimeline from "bs-vue-timeline";
+import Timelines from "@/components/molecules/Timelines.vue";
 
 export default {
   name: "skills",
   components: {
-    VueTimeline
+    Timelines
   },
   data: function() {
     return {
-      timelineItems: [
+      lines: [
         {
-          from: new Date(2014, 10),
-          to: new Date(),
-          title: "Company Name 1",
-          subtitle: "System Engineer",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          id: 1,
+          title: "test1",
+          body: "body1",
+          badge: "warning",
+          isRight: false
         },
         {
-          from: new Date(2009, 5),
-          to: new Date(2013, 5),
-          title: "Company Name 2",
-          subtitle: "Programmer",
-          content:
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        },
-        {
-          from: new Date(2000, 3),
-          to: new Date(2008, 12),
-          title: "Company Name 3",
-          subtitle: "Internship / Volunteer",
-          content:
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          id: 2,
+          title: "test2",
+          body: "body2",
+          badge: "warning",
+          isRight: true
         }
       ]
     };
