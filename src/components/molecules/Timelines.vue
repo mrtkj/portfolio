@@ -12,11 +12,23 @@
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4 class="timeline-title">{{ line.title }}</h4>
+            <p>{{ line.date }}</p>
           </div>
           <div class="timeline-body">
-            <p>
+            <p class="text-left">
               {{ line.body }}
             </p>
+          </div>
+          <div class="tag">
+            <b-badge
+              pill
+              variant="info"
+              v-for="tag in line.tags"
+              v-bind:key="tag"
+              class="m-2 tag-badge"
+            >
+              {{ tag }}
+            </b-badge>
           </div>
         </div>
       </li>
@@ -40,6 +52,10 @@ export default {
 </script>
 
 <style>
+.tag-badge {
+  background-color: cornflowerblue;
+}
+
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
