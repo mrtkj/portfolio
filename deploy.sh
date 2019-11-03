@@ -6,6 +6,7 @@ npm run build
 
 # 出力されたディレクトリに移動
 cd dist
+cp ../404.html 404.html
 
 # カスタムドメインにデプロイする場合
 # echo 'www.example.com' > CNAME
