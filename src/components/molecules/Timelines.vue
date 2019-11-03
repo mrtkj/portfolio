@@ -4,7 +4,7 @@
       <li
         v-for="line in timelines"
         v-bind:key="line.id"
-        v-bind:class="{ 'timeline-inverted': line.isRight }"
+        v-bind:class="{ 'timeline-inverted': isRight(line.id) }"
       >
         <div :class="line.badge" class="timeline-badge">
           <i class="glyphicon glyphicon-check"></i>
@@ -46,6 +46,11 @@ export default {
       default: function() {
         return [];
       }
+    }
+  },
+  methods: {
+    isRight(id) {
+      return id % 2 == 0;
     }
   }
 };
@@ -174,43 +179,88 @@ export default {
 
 @media (max-width: 991px) {
   .timeline:before {
-    left: 100%;
+    left: 0%;
   }
 
   .timeline > li > .timeline-panel {
     width: 94%;
+    float: right;
   }
 
   .timeline > li > .timeline-badge {
-    left: 100%;
+    left: 0%;
+  }
+
+  .timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
   }
 }
 
 @media (max-width: 767px) {
   .timeline:before {
-    left: 100%;
+    left: 0%;
   }
 
   .timeline > li > .timeline-panel {
     width: 90%;
+    float: right;
   }
 
   .timeline > li > .timeline-badge {
-    left: 100%;
+    left: 0%;
+  }
+
+  .timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
   }
 }
 
 @media (max-width: 576px) {
   .timeline:before {
-    left: 90%;
+    left: 10%;
   }
 
   .timeline > li > .timeline-panel {
     width: 80%;
+    float: right;
   }
 
   .timeline > li > .timeline-badge {
-    left: 90%;
+    left: 10%;
+  }
+
+  .timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  .timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
   }
 }
 
