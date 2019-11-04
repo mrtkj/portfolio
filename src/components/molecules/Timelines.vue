@@ -1,12 +1,23 @@
 <template>
   <div class="timelines container">
     <ul class="timeline">
+      <li class="pt-5">
+        <div class="timeline-badge-start">
+          <i class="glyphicon glyphicon-check">
+            <span
+              class="iconify mb-2"
+              data-icon="simple-line-icons:briefcase"
+              data-inline="false"
+            ></span>
+          </i>
+        </div>
+      </li>
       <li
         v-for="line in timelines"
         v-bind:key="line.id"
         v-bind:class="{ 'timeline-inverted': isRight(line.id) }"
       >
-        <div :class="line.badge" class="timeline-badge">
+        <div class="timeline-badge">
           <i class="glyphicon glyphicon-check"></i>
         </div>
         <div class="timeline-panel">
@@ -94,7 +105,7 @@ export default {
 
 .timeline > li > .timeline-panel:before {
   position: absolute;
-  top: 26px;
+  top: 13px;
   right: -15px;
   display: inline-block;
   border-top: 15px solid transparent;
@@ -106,7 +117,7 @@ export default {
 
 .timeline > li > .timeline-panel:after {
   position: absolute;
-  top: 27px;
+  top: 14px;
   right: -14px;
   display: inline-block;
   border-top: 14px solid transparent;
@@ -128,7 +139,7 @@ export default {
 }
 
 .timeline > li > .timeline-panel {
-  width: 46%;
+  width: 47%;
   float: left;
   border: 1px solid #d4d4d4;
   border-radius: 2px;
@@ -138,18 +149,37 @@ export default {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 
+.timeline > li > .timeline-badge-start {
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  margin-left: -22.5px;
+  background-color: rgb(51, 47, 71);
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
 .timeline > li > .timeline-badge {
   color: #fff;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   line-height: 50px;
   font-size: 1.4em;
   text-align: center;
   position: absolute;
   top: 16px;
   left: 50%;
-  margin-left: -25px;
-  background-color: #999999;
+  margin-left: -12.5px;
+  background-color: rgb(51, 47, 71);
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -183,11 +213,12 @@ export default {
   }
 
   .timeline > li > .timeline-panel {
-    width: 94%;
+    width: 95%;
     float: right;
   }
 
-  .timeline > li > .timeline-badge {
+  .timeline > li > .timeline-badge,
+  .timeline > li > .timeline-badge-start {
     left: 0%;
   }
 
@@ -212,11 +243,12 @@ export default {
   }
 
   .timeline > li > .timeline-panel {
-    width: 90%;
+    width: 93%;
     float: right;
   }
 
-  .timeline > li > .timeline-badge {
+  .timeline > li > .timeline-badge,
+  .timeline > li > .timeline-badge-start {
     left: 0%;
   }
 
@@ -241,11 +273,12 @@ export default {
   }
 
   .timeline > li > .timeline-panel {
-    width: 80%;
+    width: 83%;
     float: right;
   }
 
-  .timeline > li > .timeline-badge {
+  .timeline > li > .timeline-badge,
+  .timeline > li > .timeline-badge-start {
     left: 10%;
   }
 

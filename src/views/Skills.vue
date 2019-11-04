@@ -5,51 +5,40 @@
         <p class="border-bottom inline-block text-nowrap h2">
           Skills
         </p>
-        <timelines :timelines="lines"></timelines>
+        <div class="skills-container w-100">
+          <div class="row mb-2  d-flex justify-content-center">
+            <div class="card w-25 m-2">
+              <div class="h6 text-left mt-2 ml-2 mr-2 mb-0">
+                title
+              </div>
+              <b-progress :value="value" :max="max" class="m-2"></b-progress>
+            </div>
+            <div class="card w-25 m-2">
+              <div class="h6 text-left mt-2 ml-2 mr-2 mb-0">
+                title
+              </div>
+              <b-progress :value="value" :max="max" class="m-2"></b-progress>
+            </div>
+            <div class="card w-25 m-2">
+              <div class="h6 text-left mt-2 ml-2 mr-2 mb-0">
+                title
+              </div>
+              <b-progress :value="value" :max="max" class="m-2"></b-progress>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Timelines from "@/components/molecules/Timelines.vue";
-
 export default {
   name: "skills",
-  components: {
-    Timelines
-  },
   data: function() {
     return {
-      lines: [
-        {
-          id: 1,
-          title: "家具メーカー向けERP導入プロジェクト",
-          date: "2014/01～2015/09",
-          body:
-            "ERPパッケージのフロント処理開発を担当。このプロジェクトで要件定義～本番リリースまでを経験。また、アプリケーション基盤領域として、テーブル設計やCI環境構築、運営を担当。",
-          badge: "warning",
-          tags: ["Java", "SQL Server", "Jenkins", "Powershell"]
-        },
-        {
-          id: 2,
-          title: "折込広告業向け基幹システム構築",
-          date: "2013/10～2014/12",
-          body:
-            "基幹システム内で利用するマスタデータを管理する画面およびバックエンド処理を設計・開発。その際、10名程度の開発チームのリーダを担当",
-          badge: "warning",
-          tags: ["HTML", "JavaScript", "Java", "OracleDB"]
-        },
-        {
-          id: 3,
-          title: "折込広告業向け基幹システム構築",
-          date: "2013/10～2014/12",
-          body:
-            "基幹システム内で利用するマスタデータを管理する画面およびバックエンド処理を設計・開発。その際、10名程度の開発チームのリーダを担当",
-          badge: "warning",
-          tags: ["HTML", "JavaScript", "Java", "OracleDB"]
-        }
-      ]
+      value: 75,
+      max: 100
     };
   }
 };
