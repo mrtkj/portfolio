@@ -13,8 +13,9 @@
           src="../assets/vis01.jpg"
           width="180"
           height="180"
+          class="ml-2 mr-2"
         ></b-img>
-        <div class="p-5 w-25">
+        <div class="p-5 w-50">
           <p class="text-left text-nowrap h4">村田 浩司</p>
           <p class="text-left text-nowrap">
             Koji Murata<br />
