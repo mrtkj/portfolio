@@ -7,7 +7,7 @@
           v-bind:key="skill.id"
           class="card col-md-3 m-2"
         >
-          <div class="h6 text-left mt-2 ml-2 mr-2 mb-1">
+          <div class="h6 text-left mt-2 ml-2 mr-2 mb-1 container">
             <div class="row ml-2 mr-2">
               <b-img v-bind="mainProps" rounded alt="Rounded image"></b-img>
               <div class="mt-1 ml-2 align-bottom">{{ skill.title }}</div>
