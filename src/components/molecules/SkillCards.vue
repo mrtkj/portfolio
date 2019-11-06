@@ -7,33 +7,37 @@
           v-bind:key="skill.id"
           class="card col-md-3 m-2"
         >
-          <div class="h6 text-left mt-2 ml-2 mr-2 mb-0">
+          <div class="h6 text-left mt-2 ml-2 mr-2 mb-1">
             <div class="row ml-2 mr-2">
-              <b-img
-                fluid
-                :src="skill.url"
-                width="30px"
-                height="30px"
-                alt="Center image"
-              ></b-img>
-              <div class="mt-2 ml-2 align-bottom">{{ skill.title }}</div>
+              <b-img v-bind="mainProps" rounded alt="Rounded image"></b-img>
+              <div class="mt-1 ml-2 align-bottom">{{ skill.title }}</div>
+              <star-rating
+                :increment="0.5"
+                :max-rating="5"
+                inactive-color="#888"
+                active-color="#eb0"
+                :star-size="20"
+                :rating="skill.rating"
+                :show-rating="false"
+                :read-only="true"
+                class="ml-2 mb-2"
+              ></star-rating>
             </div>
-            <b-progress
-              :value="skill.value"
-              :max="skill.max"
-              :label="skill.value"
-              class="m-2"
-              show-progress
-            ></b-progress>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import StarRating from "vue-star-rating";
+
 export default {
   name: "SkillCards",
+  components: {
+    StarRating
+  },
   props: {
     skills: {
       type: Array,
@@ -42,6 +46,17 @@ export default {
         return [];
       }
     }
+  },
+  data: function() {
+    return {
+      mainProps: {
+        blank: true,
+        blankColor: "#000080",
+        width: 5,
+        height: 25,
+        class: "m1"
+      }
+    };
   }
 };
 </script>

@@ -34,37 +34,27 @@ export default {
         {
           id: 1,
           title: "Java",
-          url: require("../assets/java-coffee.png"),
-          value: 50,
-          max: 100
+          rating: 5
         },
         {
           id: 2,
           title: "PHP",
-          url: "https://picsum.photos/125/125/?image=58",
-          value: 50,
-          max: 100
+          rating: 2
         },
         {
           id: 3,
           title: "JavaScript",
-          url: "https://picsum.photos/125/125/?image=58",
-          value: 50,
-          max: 100
+          rating: 3.5
         },
         {
           id: 4,
           title: "Powershell",
-          url: "https://picsum.photos/125/125/?image=58",
-          value: 50,
-          max: 100
+          rating: 2
         },
         {
           id: 5,
           title: "test",
-          url: "https://picsum.photos/125/125/?image=58",
-          value: 50,
-          max: 100
+          rating: 2
         }
       ]
     };
