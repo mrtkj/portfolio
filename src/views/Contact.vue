@@ -115,7 +115,7 @@ export default {
         method: "POST",
         body: new FormData(document.contactForm),
         mode: "no-cors"
-      }).then(response => {
+      }).then(response => { // eslint-disable-line no-unused-vars
         // 送信が完了したタイミングでフォームをクリアする
         me.onReset(evt);
 
