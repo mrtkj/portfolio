@@ -116,7 +116,7 @@ export default {
         body: new FormData(document.contactForm),
         mode: "no-cors"
       }).then(response => {
-        console.log(response);
+        // 送信が完了したタイミングでフォームをクリアする
         me.onReset(evt);
 
         me.$bvModal.msgBoxOk("メッセージが送信されました。", {
