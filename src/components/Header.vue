@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header sticky-top">
     <b-navbar
       class="header-navbar"
       toggleable="lg"
