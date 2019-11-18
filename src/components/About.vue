@@ -6,18 +6,18 @@
           About me
         </p>
       </div>
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center align-items-center">
         <b-img
           rounded="circle"
           alt="Circle image"
           src="../assets/vis01.jpg"
-          width="180"
-          height="180"
-          class="ml-2 mr-2"
+          width="120"
+          height="120"
+          class="m-4"
         ></b-img>
-        <div class="m-5">
+        <div class="m-4">
           <p class="text-left text-nowrap h4 inline-block">村田 浩司</p>
-          <p class="text-left text-nowrap inline-block">
+          <p class="text-left text-nowrap inline-block mb-0">
             Koji Murata<br />
             Engineer
           </p>
